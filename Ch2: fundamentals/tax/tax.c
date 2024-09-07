@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void)
+{
+    float amount;
+
+    printf("Enter an amount: ");
+    scanf("%f", &amount);
+
+    // Add a five percent tax
+    printf("With tax added: $%.2f\n", amount*1.05f);
+
+    return 0;
+}
