@@ -37,7 +37,7 @@ int main(void)
         */
 
         move = rand() % 4;
-        if (dirs_tried[0] && dirs_tried[1] && dirs_tried[2] & dirs_tried[3])
+        if (dirs_tried[0] && dirs_tried[1] && dirs_tried[2] && dirs_tried[3])
             break;
         board[row][col] = mark;
         //printf("Current Pos: (%d,%d) \t Current Move: %d\n", row, col, move);
