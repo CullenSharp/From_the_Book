@@ -9,7 +9,8 @@
 int main(void)
 {
     char board[ROWS][COLUMNS];
-    int move, row = 0, col = 0, dirs_tried[4] = {false};
+    int move, row = 0, col = 0;
+    bool dirs_tried[4] = {false};
     char mark = 'A';
 
     // Init board
@@ -27,7 +28,14 @@ int main(void)
          * Move logic:
          *      Pick a random direction
          *      Check if we can move to that space (i.e. it's unvisited and not out of bounds).
-         *      Move to that space
+         *      If not,
+         *         record that we tried that direction, and
+         *         try another direction at random.
+         *      If so,
+         *         reset the record for which directions have been tried, and
+         *         move on to the next space.
+         *      If stuck,
+         *         terminate.
          *
          *           ^
          *           0
@@ -40,7 +48,6 @@ int main(void)
         if (dirs_tried[0] && dirs_tried[1] && dirs_tried[2] && dirs_tried[3])
             break;
         board[row][col] = mark;
-        //printf("Current Pos: (%d,%d) \t Current Move: %d\n", row, col, move);
 
         // If in first row
         if (row == 0) {
@@ -287,13 +294,10 @@ int main(void)
             }
         }
     }
-    
-
 
     // Show board
     for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 10; j++) {
-            //printf(" %d,%d", i, j);
             printf(" %c", board[i][j]);
         }
         printf("\n");
