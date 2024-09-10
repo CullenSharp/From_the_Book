@@ -57,14 +57,14 @@ int main(void)
                     case 1: 
                         dirs_tried[move] = true;
                         if (board[row][col + 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col++;
                         break;
                     case 2:
                         dirs_tried[move] = true;
                         if (board[row + 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row++;
                         break;
@@ -79,14 +79,14 @@ int main(void)
                     case 2:
                         dirs_tried[move] = true;
                         if (board[row + 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row++;
                         break;
                     case 3:
                         dirs_tried[move] = true;
                         if (board[row][col - 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col--;
                         break;
@@ -99,21 +99,21 @@ int main(void)
                     case 1:
                         dirs_tried[move] = true;
                         if (board[row][col + 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col++;
                         break;
                     case 2:
                         dirs_tried[move] = true;
                         if (board[row + 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row++;
                         break;
                     case 3:
                         dirs_tried[move] = true;
                         if (board[row][col - 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col--;
                         break;
@@ -132,14 +132,14 @@ int main(void)
                     case 0:
                         dirs_tried[move] = true;
                         if (board[row - 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row--;
                         break;
                     case 1:
                         dirs_tried[move] = true;
                         if (board[row][col + 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col++;
                         break;
@@ -155,14 +155,14 @@ int main(void)
                     case 0:
                         dirs_tried[move] = true;
                         if (board[row - 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row--;
                         break;
                     case 3:
                         dirs_tried[move] = true;
                         if (board[row][col - 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col--;
                         break;
@@ -176,21 +176,21 @@ int main(void)
                     case 0:
                         dirs_tried[move] = true;
                         if (board[row - 1][col] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         row--;
                         break;
                     case 1:
                         dirs_tried[move] = true;
                         if (board[row][col + 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col++;
                         break;
                     case 3:
                         dirs_tried[move] = true;
                         if (board[row][col - 1] != '.') continue;
-                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                        dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                         mark++;
                         col--;
                         break;
@@ -208,21 +208,21 @@ int main(void)
                 case 0:
                     dirs_tried[move] = true;
                     if (board[row - 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row--;
                     break;
                 case 1:
                     dirs_tried[move] = true;
                     if (board[row][col + 1] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     col++;
                     break;
                 case 2:
                     dirs_tried[move] = true;
                     if (board[row + 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row++;
                     break;
@@ -238,21 +238,21 @@ int main(void)
                 case 0:
                     dirs_tried[move] = true;
                     if (board[row - 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row--;
                     break;
                 case 2:
                     dirs_tried[move] = true;
                     if (board[row + 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row++;
                     break;
                 case 3:
                     dirs_tried[move] = true;
                     if (board[row][col - 1] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     col--;
                     break;
@@ -266,28 +266,28 @@ int main(void)
                 case 0:
                     dirs_tried[move] = true;
                     if (board[row - 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row--;
                     break;
                 case 1:
                     dirs_tried[move] = true;
                     if (board[row][col + 1] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     col++;
                     break;
                 case 2:
                     dirs_tried[move] = true;
                     if (board[row + 1][col] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     row++;
                     break;
                 case 3:
                     dirs_tried[move] = true;
                     if (board[row][col - 1] != '.') continue;
-                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = 0;
+                    dirs_tried[0] = dirs_tried[1] = dirs_tried[2] = dirs_tried[3] = false;
                     mark++;
                     col--;
                     break;
