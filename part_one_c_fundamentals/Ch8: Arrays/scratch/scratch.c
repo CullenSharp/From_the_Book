@@ -2,14 +2,20 @@
 
 int main(void) 
 {
-    int bonk[4] = {1,2,3,4};
+    printf("%d\n", 'P' - 'A');
+    printf("%d\n", 'I' - 'A');
+    printf("%d\n", 'T' - 'A');
+    printf("%d\n", 'F' - 'A');
+    printf("%d\n", 'A' - 'A');
+    printf("%d\n", 'L' - 'A');
+    printf("%d\n", 'L' - 'A');
 
-    for (int i = 0; i < 4; i++)
-        printf(" %d", bonk[i]);
-
-    bonk[0] = bonk[1] = bonk[2] = bonk[3] = 0;
-    for (int i = 0; i < 4; i++)
-        printf(" %d", bonk[i]);
+    for (char ch = 'a'; ch <= 'z'; ch++) {
+        if (ch % 13 == 0)
+            printf("\n");
+            
+        printf(" %c,%d", ch, ch);
+    }
 
     printf("\n");
     return 0;
