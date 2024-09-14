@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 void create_magic_square(int n, int magic_square[n][n]);
 void print_magic_square(int n, int magic_square[n][n]);
