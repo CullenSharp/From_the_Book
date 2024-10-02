@@ -4,20 +4,21 @@
 
 int main(void)
 {
-    char ch, str[LEN], *p;
+    char str[LEN], *p;
     printf("Enter a message: ");
 
     // Point p at the first element of str
-    p = str;
-    while((ch = getchar()) != '\n' && p < (str + LEN)) {
-        *p++ = ch;
+    for (p = str; p < str + LEN; p++) {
+        *p = getchar();
+
+        if (*p == '\n')
+            break;
     }
     
     printf("The reversal is: ");
-    while(p > str) {
-        printf("%c", *--p);
-    }
-    printf("\n");
+    while(p >= str)
+        putchar(*--p);
+    putchar('\n');
 
     return 0;
 }
