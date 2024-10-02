@@ -51,7 +51,7 @@ void split_date(int day_of_the_year, int year,
     * Nov: [305, 334]
     * Dec: [335, 365]
     */
-   
+
     // Check if leap year
     if (year % 4 == 0) {
         if (day_of_the_year >= 1 && day_of_the_year <= 31) {
@@ -131,8 +131,3 @@ void split_date(int day_of_the_year, int year,
         }
     }
 }
-
-/*
- * sup day of the year is 60
- * This is the 29th day of the 2nd month
-*/
